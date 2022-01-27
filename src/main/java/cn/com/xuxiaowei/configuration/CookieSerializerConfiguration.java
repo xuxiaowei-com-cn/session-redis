@@ -29,6 +29,12 @@ public class CookieSerializerConfiguration {
         // 域，这允许跨子域共享cookie，默认设置是使用当前域。
         defaultCookieSerializer.setDomainName("xuxiaowei.com.cn");
 
+        // Session Cookie 是否使用 Base64
+        defaultCookieSerializer.setUseBase64Encoding(false);
+
+        // Cookie 过期时间
+        defaultCookieSerializer.setCookieMaxAge(60 * 10);
+
         // Cookie的路径。
         defaultCookieSerializer.setCookiePath("/");
 
